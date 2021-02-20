@@ -1,0 +1,8 @@
+samtools view -h ~/projects/resgen-server/media/https/s3.amazonaws.com/nanopore-human-wgs/chm13/assemblies/alignments/chm13.draft_v1.0.hifi.bam.. | head -n 1000 | samtools view -bS - > ~/projects/bam-to-multivec/data/ont.bam
+samtools index data/ont.bam
+
+samtools view -h ~/projects/resgen-server/media/https/s3.amazonaws.com/nanopore-human-wgs/chm13/assemblies/alignments/chm13.draft_v1.0.hifi.bam.. | head -n 10000 | samtools view -bS - > ~/projects/bam-to-multivec/data/ont.10k.bam
+samtools index data/ont.10k.bam
+
+samtools view -h ~/projects/resgen-server/media/https/s3.amazonaws.com/nanopore-human-wgs/chm13/assemblies/alignments/chm13.draft_v1.0.hifi.bam.. | head -n 100000 | samtools view -bS - > ~/projects/bam-to-multivec/data/ont.100k.bam
+samtools index data/ont.100k.bam
